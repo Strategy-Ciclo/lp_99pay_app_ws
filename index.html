@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Web Stories - 99Pay</title>
-
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap');
@@ -28,14 +26,13 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            height: -webkit-fill-available;
+            height: -webkit-fill-available; 
             height: 100dvh;
             overflow: hidden;
         }
 
         /* Força a compatibilidade do desfoque no iOS WebKit */
-        .backdrop-blur-md,
-        .backdrop-blur-sm {
+        .backdrop-blur-md, .backdrop-blur-sm {
             -webkit-backdrop-filter: blur(8px) !important;
             backdrop-filter: blur(8px) !important;
         }
@@ -48,7 +45,7 @@
             position: relative;
             background-color: var(--99-black);
             overflow: hidden;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
 
         @media (min-width: 450px) {
@@ -84,8 +81,7 @@
         }
 
         /* ÁREAS DE TOQUE (Fundo invisível que recebe os cliques) */
-        .touch-left,
-        .touch-right {
+        .touch-left, .touch-right {
             position: absolute;
             top: 0;
             height: 100%;
@@ -93,16 +89,8 @@
             cursor: pointer;
             -webkit-tap-highlight-color: transparent;
         }
-
-        .touch-left {
-            width: 33.33%;
-            left: 0;
-        }
-
-        .touch-right {
-            width: 66.67%;
-            right: 0;
-        }
+        .touch-left { width: 33.33%; left: 0; }
+        .touch-right { width: 66.67%; right: 0; }
 
         /* CAMADAS DO STORY */
         .story-slide {
@@ -151,36 +139,16 @@
 
         /* ANIMAÇÃO DOS BOTÕES */
         @-webkit-keyframes pulse {
-            0% {
-                -webkit-transform: scale(1);
-                transform: scale(1);
-            }
-
-            50% {
-                -webkit-transform: scale(1.05);
-                transform: scale(1.05);
-            }
-
-            100% {
-                -webkit-transform: scale(1);
-                transform: scale(1);
-            }
+            0% { -webkit-transform: scale(1); transform: scale(1); }
+            50% { -webkit-transform: scale(1.05); transform: scale(1.05); }
+            100% { -webkit-transform: scale(1); transform: scale(1); }
         }
-
         @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-
-            100% {
-                transform: scale(1);
-            }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
-
+        
         .cta-button {
             -webkit-animation: pulse 2s infinite;
             animation: pulse 2s infinite;
@@ -189,26 +157,19 @@
         .interactive-btn {
             pointer-events: auto;
             position: relative;
-            z-index: 50;
+            z-index: 50; 
         }
     </style>
 </head>
-
 <body>
 
     <div class="story-container">
-
+        
         <!-- Barras de Progresso -->
         <div class="progress-container">
-            <div class="progress-bar">
-                <div class="progress-fill" id="fill-0"></div>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="fill-1"></div>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="fill-2"></div>
-            </div>
+            <div class="progress-bar"><div class="progress-fill" id="fill-0"></div></div>
+            <div class="progress-bar"><div class="progress-fill" id="fill-1"></div></div>
+            <div class="progress-bar"><div class="progress-fill" id="fill-2"></div></div>
         </div>
 
         <!-- Áreas de toque de navegação -->
@@ -217,36 +178,28 @@
 
         <!-- STORY 1: À Vista (Design Dinâmico Neo-Brutalista) -->
         <div class="story-slide active" id="story-0">
-            <img src="https://gsvc.pgmais.com.br/comercial/RCS/99PAY/img_sem_sexto/bg_amarelo99.jpg" alt="Vantagem"
-                class="bg-image">
-
-            <div class="bg-overlay"
-                style="background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);"></div>
-
+            <img src="https://gsvc.pgmais.com.br/comercial/RCS/99PAY/img_sem_sexto/bg_amarelo99.jpg" alt="Vantagem" class="bg-image">
+            
+            <div class="bg-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);"></div>
+            
             <div class="story-content pt-16 pb-6 px-6">
-
+                
                 <!-- Topo -->
                 <div class="shrink-0 text-black relative z-20">
-                    <span class="font-bold text-2xl tracking-tighter mb-2 block drop-shadow-sm">99<span
-                            class="font-normal">Pay</span></span>
+                    <span class="font-bold text-2xl tracking-tighter mb-2 block drop-shadow-sm">99<span class="font-normal">Pay</span></span>
                 </div>
-
+                
                 <!-- Centro Dinâmico -->
                 <div class="flex-1 flex flex-col justify-center items-center w-full relative z-20">
-
+                    
                     <div class="relative w-full max-w-[280px] mx-auto mt-2 mb-8">
-
-                        <div
-                            class="absolute inset-0 bg-black transform -skew-y-6 translate-y-3 translate-x-3 shadow-2xl">
-                        </div>
-                        <div class="absolute inset-0 bg-[#FF6200] transform -skew-y-6 translate-y-1.5 translate-x-1.5">
-                        </div>
-
-                        <div
-                            class="relative bg-yellow-400 transform -skew-y-6 p-5 flex flex-col items-center shadow-lg">
+                        
+                        <div class="absolute inset-0 bg-black transform -skew-y-6 translate-y-3 translate-x-3 shadow-2xl"></div>
+                        <div class="absolute inset-0 bg-[#FF6200] transform -skew-y-6 translate-y-1.5 translate-x-1.5"></div>
+                        
+                        <div class="relative bg-yellow-400 transform -skew-y-6 p-5 flex flex-col items-center shadow-lg">
                             <div class="transform skew-y-6 text-center w-full">
-                                <p
-                                    class="text-black font-black uppercase tracking-widest text-xs mb-2 border-b-[3px] border-black inline-block pb-1">
+                                <p class="text-black font-black uppercase tracking-widest text-xs mb-2 border-b-[3px] border-black inline-block pb-1">
                                     Pagamento à vista
                                 </p>
                                 <p class="text-black font-extrabold text-xl leading-none mt-1">Você ganha até</p>
@@ -256,19 +209,16 @@
                                 </h2>
                             </div>
                         </div>
-
-                        <div
-                            class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 rotate-3 z-30 w-[115%] text-center">
-                            <div
-                                class="inline-block bg-black text-yellow-400 font-black text-3xl tracking-tight px-6 py-2 uppercase border-4 border-yellow-400 shadow-[4px_4px_0px_#000000]">
+                        
+                        <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 rotate-3 z-30 w-[115%] text-center">
+                            <div class="inline-block bg-black text-yellow-400 font-black text-3xl tracking-tight px-6 py-2 uppercase border-4 border-yellow-400 shadow-[4px_4px_0px_#000000]">
                                 Nos Juros
                             </div>
                         </div>
-
+                        
                     </div>
-
-                    <div
-                        class="mt-4 bg-black/60 backdrop-blur-sm p-4 border-l-4 border-yellow-400 w-full max-w-[320px]">
+                    
+                    <div class="mt-4 bg-black/60 backdrop-blur-sm p-4 border-l-4 border-yellow-400 w-full max-w-[320px]">
                         <p class="text-white text-sm font-medium leading-snug drop-shadow-md">
                             É jogo rápido: gerou o código, você tem 24h para pagar e resolver sua vida sem complicação.
                         </p>
@@ -277,141 +227,120 @@
 
                 <!-- Rodapé Fixo (Ajustado para suportar 2 botões) -->
                 <div class="shrink-0 h-[140px] w-full flex flex-col justify-start gap-3 relative z-50">
-                    <a href="https://oia.99app.com/99/WIBgTdr" target="_blank"
-                        class="interactive-btn cta-button inline-block bg-black text-white font-extrabold text-lg py-4 px-10 rounded-full shadow-2xl w-full text-center hover:bg-gray-800 transition-colors">
+                    <a href="https://oia.99app.com/99/WIBgTdr" target="_blank" class="interactive-btn cta-button inline-block bg-black text-white font-extrabold text-lg py-4 px-10 rounded-full shadow-2xl w-full text-center hover:bg-gray-800 transition-colors">
                         Acesse o app
                     </a>
-
-                    <a href="tel:40044885"
-                        class="interactive-btn inline-block bg-transparent border-2 border-black text-black font-bold text-base py-3 px-8 rounded-full w-full text-center hover:bg-black hover:text-white transition-colors">
+                    
+                    <a href="tel:40044885" class="interactive-btn inline-block bg-transparent border-2 border-black text-black font-bold text-base py-3 px-8 rounded-full w-full text-center hover:bg-black hover:text-white transition-colors">
                         Central de Atendimento
                     </a>
                 </div>
-
+                
             </div>
         </div>
 
         <!-- STORY 2: Reparcelamento (Design Dinâmico Neo-Brutalista com Inclinação Invertida) -->
         <div class="story-slide" id="story-1">
-            <img src="https://gsvc.pgmais.com.br/comercial/RCS/99PAY/img_sem_sexto/bg_amarelo99_v3.jpg"
-                alt="Tranquilidade" class="bg-image"
-                style="-webkit-transform: scale(1.15) translateY(-6%); transform: scale(1.15) translateY(-6%);">
-
-            <div class="bg-overlay"
-                style="background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.9) 100%);">
-            </div>
-
+            <img src="https://gsvc.pgmais.com.br/comercial/RCS/99PAY/img_sem_sexto/bg_amarelo99_v3.jpg" alt="Tranquilidade" class="bg-image" style="-webkit-transform: scale(1.15) translateY(-6%); transform: scale(1.15) translateY(-6%);">
+            
+            <div class="bg-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.9) 100%);"></div>
+            
             <div class="story-content pt-16 pb-6 px-6">
-
+                
                 <!-- Topo -->
                 <div class="shrink-0">
-                    <h1 class="text-4xl font-extrabold text-black tracking-tight leading-none drop-shadow-lg">
-                        Retome o<br>controle do<br><span class="text-white">seu dinheiro.</span>
+                    <h1 class="text-4xl font-extrabold text-white tracking-tight leading-none drop-shadow-lg">
+                        Retome o<br>controle do<br><span class="text-yellow-400">seu dinheiro.</span>
                     </h1>
                 </div>
-
-                <!-- Centro Dinâmico -->
-                <div class="flex-1 flex flex-col justify-end items-center pb-2 pt-8 w-full relative z-20">
-
+                
+                <!-- Centro Dinâmico - Ajustado com justify-center para melhor distribuição -->
+                <div class="flex-1 flex flex-col justify-center items-center py-4 w-full relative z-20">
+                    
                     <div class="relative w-full max-w-[280px] mx-auto mt-2 mb-6">
-
+                        
                         <!-- Sombras sólidas sobrepostas (Invertidas: skew-y-6) -->
-                        <div
-                            class="absolute inset-0 bg-black transform skew-y-6 translate-y-3 translate-x-3 shadow-2xl">
-                        </div>
-                        <div class="absolute inset-0 bg-[#FF6200] transform skew-y-6 translate-y-1.5 translate-x-1.5">
-                        </div>
-
+                        <div class="absolute inset-0 bg-black transform skew-y-6 translate-y-3 translate-x-3 shadow-2xl"></div>
+                        <div class="absolute inset-0 bg-[#FF6200] transform skew-y-6 translate-y-1.5 translate-x-1.5"></div>
+                        
                         <!-- Card Principal Amarelo (Invertido: skew-y-6) -->
                         <div class="relative bg-yellow-400 transform skew-y-6 p-4 flex flex-col items-center shadow-lg">
-
+                            
                             <!-- Texto revertido (-skew-y-6) para não ficar torto -->
                             <div class="transform -skew-y-6 text-center w-full">
-                                <p
-                                    class="text-black font-black uppercase tracking-widest text-xs mb-1 border-b-[3px] border-black inline-block pb-1">
+                                <p class="text-black font-black uppercase tracking-widest text-xs mb-1 border-b-[3px] border-black inline-block pb-1">
                                     Reparcelamento
                                 </p>
                                 <h2 class="text-black font-black tracking-tighter flex flex-col items-center mt-2 mb-1">
-                                    <span class="text-[2.8rem] leading-[0.8]">ENTRADA</span>
-                                    <span class="text-[4.2rem] leading-[0.8]">+18x</span>
+                                    <span class="text-[2.4rem] leading-none uppercase">Entrada</span>
+                                    <span class="text-xl uppercase mt-1">mais</span>
+                                    <span class="text-[1.9rem] leading-none uppercase mt-1">18 parcelas</span>
                                 </h2>
                             </div>
                         </div>
-
+                        
                         <!-- Etiqueta Flutuante (Invertida: -rotate-3) -->
-                        <div
-                            class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 -rotate-3 z-30 w-[115%] text-center">
-                            <div
-                                class="inline-block bg-black text-yellow-400 font-black text-2xl tracking-tight px-4 py-2 uppercase border-4 border-yellow-400 shadow-[4px_4px_0px_#000000]">
-                                Respire Aliviado
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 -rotate-3 z-30 w-[115%] text-center">
+                            <div class="inline-block bg-black text-yellow-400 font-black text-xl tracking-tight px-4 py-2 uppercase border-4 border-yellow-400 shadow-[4px_4px_0px_#000000]">
+                                COM JUROS REDUZIDOS!
                             </div>
                         </div>
-
+                        
                     </div>
-
-                    <div
-                        class="mt-4 bg-black/60 backdrop-blur-sm p-4 border-l-4 border-yellow-400 w-full max-w-[320px]">
+                    
+                    <div class="mt-4 bg-black/60 backdrop-blur-sm p-4 border-l-4 border-yellow-400 w-full max-w-[320px]">
                         <p class="text-white text-sm font-medium leading-snug drop-shadow-md">
-                            Assegure condições mais vantajosas e tenha tranquilidade. Assine seu acordo no app até as
-                            23h59.
+                            Assegure condições mais vantajosas e tenha tranquilidade. Assine seu acordo no app até as 23h59.
                         </p>
                     </div>
                 </div>
-
+                
                 <!-- Rodapé Fixo (Ajustado para suportar 2 botões) -->
                 <div class="shrink-0 h-[140px] w-full flex flex-col justify-start gap-3">
-                    <a href="https://oia.99app.com/99/WIBgTdr" target="_blank"
-                        class="interactive-btn cta-button inline-block bg-yellow-400 text-black font-extrabold text-lg py-4 px-10 rounded-full shadow-xl w-full text-center hover:bg-yellow-500 transition-colors">
+                    <a href="https://oia.99app.com/99/WIBgTdr" target="_blank" class="interactive-btn cta-button inline-block bg-yellow-400 text-black font-extrabold text-lg py-4 px-10 rounded-full shadow-xl w-full text-center hover:bg-yellow-500 transition-colors">
                         Acesse o app
                     </a>
 
-                    <a href="tel:40044885"
-                        class="interactive-btn inline-block bg-transparent border-2 border-yellow-400 text-yellow-400 font-bold text-base py-3 px-8 rounded-full w-full text-center hover:bg-yellow-400 hover:text-black transition-colors">
+                    <a href="tel:40044885" class="interactive-btn inline-block bg-transparent border-2 border-yellow-400 text-yellow-400 font-bold text-base py-3 px-8 rounded-full w-full text-center hover:bg-yellow-400 hover:text-black transition-colors">
                         Central de Atendimento
                     </a>
                 </div>
-
+                
             </div>
         </div>
 
         <!-- STORY 3: CTA Final e Contato -->
         <div class="story-slide" id="story-2">
-            <img src="https://gsvc.pgmais.com.br/comercial/RCS/99PAY/img_sem_sexto/boas_vindas_99.jpg" alt="Segurança"
-                class="bg-image">
-
-            <div class="bg-overlay"
-                style="background: linear-gradient(to bottom, rgba(255,209,0,0.6), rgba(255,209,0,0.9));"></div>
-
+            <img src="https://gsvc.pgmais.com.br/comercial/RCS/99PAY/img_sem_sexto/boas_vindas_99.jpg" alt="Segurança" class="bg-image">
+            
+            <div class="bg-overlay" style="background: linear-gradient(to bottom, rgba(255,209,0,0.6), rgba(255,209,0,0.9));"></div>
+            
             <div class="story-content pt-16 pb-8 px-6">
-
+                
                 <div class="shrink-0 text-black drop-shadow-sm">
-                    <span class="font-bold text-3xl tracking-tighter leading-none block">99<span
-                            class="font-normal">Pay</span></span>
+                    <span class="font-bold text-3xl tracking-tighter leading-none block">99<span class="font-normal">Pay</span></span>
                     <span class="text-sm font-bold mt-1 block">a conta digital da 99</span>
                 </div>
-
+                
                 <div class="flex-1 flex flex-col justify-center py-6 text-black drop-shadow-sm">
                     <h1 class="text-4xl font-extrabold tracking-tight leading-tight mb-6">
                         Sua tranquilidade a um toque de distância.
                     </h1>
                     <p class="text-lg font-medium pr-4">
-                        Toda a negociação acontece direto no seu celular, com a segurança e a praticidade que você já
-                        conhece. Sem letras miúdas.
+                        Toda a negociação acontece direto no seu celular, com a segurança e a praticidade que você já conhece. Sem letras miúdas.
                     </p>
                 </div>
-
+                
                 <div class="shrink-0 h-[140px] w-full flex flex-col justify-start gap-4">
-                    <a href="https://oia.99app.com/99/WIBgTdr" target="_blank"
-                        class="interactive-btn cta-button inline-block bg-black text-white font-bold text-lg py-4 px-8 rounded-full shadow-2xl w-full text-center hover:bg-gray-800 transition-colors">
+                    <a href="https://oia.99app.com/99/WIBgTdr" target="_blank" class="interactive-btn cta-button inline-block bg-black text-white font-bold text-lg py-4 px-8 rounded-full shadow-2xl w-full text-center hover:bg-gray-800 transition-colors">
                         Acesse o app
                     </a>
 
-                    <a href="tel:40044885"
-                        class="interactive-btn inline-block bg-transparent border-2 border-black text-black font-bold text-base py-3 px-8 rounded-full w-full text-center hover:bg-black hover:text-white transition-colors">
+                    <a href="tel:40044885" class="interactive-btn inline-block bg-transparent border-2 border-black text-black font-bold text-base py-3 px-8 rounded-full w-full text-center hover:bg-black hover:text-white transition-colors">
                         Central de Atendimento
                     </a>
                 </div>
-
+                
             </div>
         </div>
 
@@ -425,19 +354,19 @@
         let animationFrameId;
 
         function updateUI() {
-            for (let i = 0; i < totalStories; i++) {
+            for(let i = 0; i < totalStories; i++) {
                 const slide = document.getElementById(`story-${i}`);
-                if (i === currentStory) {
+                if(i === currentStory) {
                     slide.classList.add('active');
                 } else {
                     slide.classList.remove('active');
                 }
             }
 
-            for (let i = 0; i < currentStory; i++) {
+            for(let i = 0; i < currentStory; i++) {
                 document.getElementById(`fill-${i}`).style.width = '100%';
             }
-            for (let i = currentStory + 1; i < totalStories; i++) {
+            for(let i = currentStory + 1; i < totalStories; i++) {
                 document.getElementById(`fill-${i}`).style.width = '0%';
             }
         }
@@ -491,5 +420,4 @@
         resetTimer();
     </script>
 </body>
-
 </html>
